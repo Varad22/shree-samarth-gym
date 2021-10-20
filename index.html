@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+    <title>Shree Samarth Gym , Crossfit and Cardio </title>
+
+
+
+
+    <script>
+
+        $(document).ready(function () {
+            $('.mobile_home').on('click', function () {
+                $('#header').toggleClass('add_height');
+
+            })
+        })
+
+    </script>
+
+    <style>
+        .full_page_alert {
+            position: fixed;
+            width: -webkit-fill-available;
+            height: -webkit-fill-available;
+            background: white;
+            top: 0;
+            z-index: 9999999;
+            padding: 63px;
+            text-align: center;
+        }
+
+        body {
+            font-family: Montserrat;
+            background: repeating-linear-gradient(45deg, #727452, #000000 100px);
+            /* background: repeating-linear-gradient(45deg, black, #413d48 100px); */
+            background-position: center;
+            background-size: 107px 108px;
+            background-attachment: fixed;
+        }
+
+        .view_counter {
+            width: fit-content;
+            max-width: 200px;
+            text-align: center;
+            font-size: 10px;
+            padding: 2px 12px;
+            background: black;
+            color: white;
+            border-radius: 3px;
+            margin: 0 auto;
+            top: 0px;
+        }
+
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .card_content {
+            margin: 44px auto 10px;
+            z-index: 2;
+            text-align: left;
+            padding: 0px 29px;
+        }
+
+        .card_content img {
+            height: 93px;
+            max-width: 296px;
+            border-radius: 6px;
+            border: 8px solid #ffffff1f;
+        }
+
+        div,
+        h1,
+        h2,
+        h3,
+        h4,
+        p,
+        i,
+        a,
+        footer {
+            position: relative;
+            transition: 0.4s;
+        }
+
+        div {
+            display: block;
+        }
+
+        .card {
+            width: 400px;
+            overflow: hidden;
+            margin: 20px auto;
+            z-index: 0;
+            background: url(static/imgs/bg.jpg);
+            background-size: 100% 100%;
+            color: white;
+            padding: 0px 0px 27px;
+        }
+
+        .card_content2 {
+            z-index: 2;
+            text-align: left;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .card_content2 h2 {
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 5px 30px;
+            text-shadow: 0px 0px 11px black;
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            display: block;
+            font-size: 1.5em;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .card_content2 p {
+            text-transform: capitalize;
+            font-weight: 600;
+            font-size: 12px;
+            margin: 0px 33px;
+        }
+
+        .dis_flex {
+            display: block;
+            text-align: center;
+            padding: 16px 11px 0px;
+        }
+
+        a {
+            text-decoration: unset;
+            color: unset;
+        }
+
+        .dis_flex .link_btn {
+            color: white;
+            padding: 4px 10px;
+            width: fit-content;
+            font-size: 12px;
+            border-radius: 22px;
+            margin: 5px 2px;
+            display: inline-block;
+            border: 1px solid;
+        }
+
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .contact_details {
+            padding: 21px 24px;
+        }
+
+        .contact_details .contact_d {
+            display: flex;
+        }
+
+        .contact_details .contact_d i {
+            margin: 4px;
+            color: white;
+            height: 17px;
+            font-size: 15px;
+            padding: 7px;
+            border-radius: 100%;
+            text-align: center;
+            width: 16px;
+            border: 1px solid white;
+        }
+
+        .dis_flex .share_wtsp {
+            padding: 0pc;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        .share_wtsp form {
+            display: flex;
+            margin: 14px auto 20px;
+            position: relative;
+            width: fit-content;
+        }
+
+        .dis_flex .share_wtsp input {
+            font-size: 13px;
+            border: 0px;
+            padding: 10px;
+            outline: none;
+            background: white;
+            box-shadow: 0px 0px 10px 0px #0000002e;
+        }
+
+        .wtsp_share_btn {
+            background: #1aab2c;
+            font-size: 12px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: unset;
+            color: unset;
+        }
+
+        .dis_flex .big_btns {
+            background: #2e2c41;
+            color: white;
+            border-radius: 3px;
+            font-size: 12px;
+            padding: 10px;
+            display: inline-block;
+            text-align: center;
+            margin: 3px 0px;
+            border: 1px solid;
+            width: 139px;
+            font-weight: 500;
+            box-shadow: 0px 0px 10px 0px #0000002e;
+        }
+
+        .share_box {
+            display: none;
+            background: white;
+            color: black;
+            position: fixed;
+            top: 10%;
+            width: 351px;
+            padding: 10px;
+            box-shadow: 0px 0px 10px 0px #00000033;
+            z-index: 3;
+            border-radius: 11px;
+        }
+
+        .card2 {
+            background: white;
+            width: 400px;
+            margin: 7px auto;
+            padding: 0px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .card2 h3 {
+            text-align: left;
+            font-size: 17px;
+            background: linear-gradient(45deg, black 80%, #fed517 65%);
+            color: #ffffff;
+            font-weight: 400;
+            letter-spacing: -1px;
+            width: -webkit-fill-available;
+            border-bottom: 3px solid;
+            padding: 12px 25px;
+            margin: 0px 0px 21px;
+        }
+
+        #qr_code_d {
+            left: 50%;
+            position: relative;
+            transform: translate(-50%, 0px);
+            margin: 0px 0px 24px;
+        }
+
+        .card2 h3 {
+            text-align: left;
+            font-size: 17px;
+            background: linear-gradient(45deg, black 80%, #fed517 65%);
+            color: #ffffff;
+            font-weight: 400;
+            letter-spacing: -1px;
+            width: -webkit-fill-available;
+            border-bottom: 3px solid;
+            padding: 12px 25px;
+            margin: 0px 0px 21px;
+        }
+
+        #about_us p {
+            white-space: pre-line;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 2;
+            padding: 10px 20px;
+            margin: 0;
+        }
+
+        .product_s {
+            text-align: center;
+            background: #fbf7d9;
+            padding: 10px;
+            width: 88%;
+            border-radius: 7px;
+            margin: 20px auto;
+        }
+
+        .img_gall {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .img_gall img {
+            max-width: 100%;
+            background: white;
+            max-height: 400px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .product_s img {
+            width: auto;
+            max-width: 90%;
+            background: white;
+            border-radius: 5px;
+        }
+
+        #payment h2 {
+            font-size: 12px;
+            font-weight: 500;
+            color: gray;
+            width: 77%;
+            margin: 0 auto;
+        }
+
+        #payment p {
+            font-size: 19px;
+            font-weight: 500;
+            color: black;
+            width: 77%;
+            margin: 8px auto;
+        }
+
+        #payment img {
+            width: 100%;
+            border-radius: 20px;
+            margin: 10px 0px;
+        }
+
+        .card2 form input,
+        .card2 form textarea {
+            width: -webkit-fill-available;
+            font-size: 14px;
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid #dedede;
+            margin: 4px 26px;
+            resize: vertical;
+            background: #00000005;
+        }
+
+        .card2 form input[type=submit] {
+            color: white;
+            font-size: 20px;
+            background: #2e2c41;
+        }
+
+        .menu_bottom {
+            background: white;
+            width: -webkit-fill-available;
+            text-align: center;
+            color: #2e2c41;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            overflow-x: auto;
+        }
+
+        .menu_container {
+            width: auto;
+            text-align: left;
+            display: flex;
+        }
+
+        .menu_item {
+            text-align: center;
+            font-weight: 600;
+            display: inline-grid;
+            font-size: 12px;
+            margin: 15px;
+            width: 209px;
+            white-space: pre;
+        }
+
+        .menu_item i {
+            font-size: 20px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="card" id="home">
+
+
+        <div class="card_content">
+            <img src="./static/imgs/photo.jpeg" alt="logo">
+        </div>
+        <div class="card_content2">
+            <h2> Shree Samarth Gym , Crossfit and Cardio </h2>
+            <p>Umesh Patil </p>
+            <p>Owner </p>
+
+        </div>
+        <div class="dis_flex">
+            <a href="tel:+919833769885" target="_blank">
+                <div class="link_btn">Call</div>
+            </a> <a
+                href="https://api.whatsapp.com/send?phone=919833769885&text=Hi, Shree Samarth Gym , Crossfit and Cardio"
+                target="_blank">
+                <div class="link_btn">WhatsApp</div>
+            </a>
+
+
+            <a href="https://g.page/shree-samarth-gym?share" target="_blank">
+                <div class="link_btn">Direction</div>
+            </a> <a href="Mailto:umeshpatil010684@gmail.com" target="_blank">
+                <div class="link_btn">Mail</div>
+            </a> <a href="https://shree-samarth-gym.business.site/" target="_blank">
+                <div class="link_btn">Website</div>
+            </a>
+        </div>
+        <div class="dis_flex">
+            <a href="https://www.instagram.com/shree_samarth_gym/" target="_blank">
+                <div class="link_btn">Instagram</div>
+            </a>
+            <a href="https://www.facebook.com/Patilgym" target="_blank">
+                <div class="link_btn">Facebook</div>
+            </a>
+        </div>
+
+        <div class="contact_details">
+            <div class="contact_d"><i class="fa fa-phone"><img src="./static/imgs/phone-square-alt-solid.svg"
+                        alt=""></i>
+
+                <p>+91 9833769885</p>
+            </div>
+            <div class="contact_d"><i class="fa fa-phone"><img src="./static/imgs/whatsapp-brands.svg" alt=""></i>
+                <p>+91 9833769885</p>
+            </div>
+            <div class="contact_d"><i class="fa fa-envelope"><img src="./static/imgs/envelope-regular.svg" alt=""></i>
+                <p>umeshpatil010684@gmail.com</p>
+            </div>
+            <div class="contact_d"><i class="fa fa-map-marker"><img src="./static/imgs/map-marker-alt-solid.svg"
+                        alt=""></i>
+                <p>Shree Sidhivinayak Encave Sector-9, New Panvel, 410206 </p>
+            </div>
+        </div>
+
+
+
+        <div class="dis_flex">
+
+            <a href="contact_download.php?id=199">
+                <div class="big_btns">Save to Contacts <i class="fa fa-download"></i></div>
+
+                <a class="a2a_dd big_btns" href="https://www.addtoany.com/share">Share</a>
+
+                <script async src="https://static.addtoany.com/menu/page.js"></script>
+            </a>
+
+
+
+
+        </div>
+    </div>
+
+
+
+    <!--------------about us --------------------------->
+
+    <div class="card2" id="about_us">
+        <h3>About Us</h3>
+        <p>2008</p>
+        <p>"All progress takes place outside the comfort zone.”
+            Come and Join Shree Samarth unisex Gym.
+            Why to join?
+            • Friendly trainers
+            • Personal training and no hidden charges
+            • Fully Air-conditioned
+            • Highly rated gym in panvel (4.9 rating)
+            • Lowest yearly subscription
+            • Cardio crossfit and gyming at one place
+            • Latest equipments
+            And many more things
+            Have a visit today!!
+
+            Thankyou for your precious time
+            Seeing forward to meet you
+        </p>
+
+
+    </div>
+
+    <!------------shopping online-------------------------->
+
+
+
+
+
+
+    <!--------------youtube videos--------------------------->
+
+
+
+
+    <!----------product and services ----------------------->
+
+    <div class="card2" id="product_services">
+        <h3>Products & Services</h3>
+        <div class="product_s">
+            <p></p>
+            <img src="./static/imgs/pic1.jpeg">
+        </div>
+        <div class="product_s">
+            <p></p>
+            <img src="./static/imgs/pic2.jpeg">
+        </div>
+        <div class="product_s">
+            <p></p>
+            <img src="./static/imgs/pic3.jpeg">
+        </div>
+        <div class="product_s">
+            <p></p>
+            <img src="./static/imgs/pic4.jpeg">
+        </div>
+        <div class="product_s">
+            <p></p>
+            <img src="./static/imgs/pic5.jpeg">
+        </div>
+        <div class="product_s">
+            <p></p>
+            <img src="./static/imgs/pic6.jpeg">
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    <!----------image gallery----------------------->
+
+
+    <div class="card2" id="gallery">
+        <h3>Image Gallery</h3>
+
+        <div class="img_gall">
+            <img src="./static/imgs/pic7.jpeg">
+        </div>
+        <div class="img_gall">
+            <img src="./static/imgs/pic8.jpeg">
+        </div>
+        <div class="img_gall">
+            <img src="./static/imgs/pic9.jpeg">
+        </div>
+        <div class="img_gall">
+            <img src="./static/imgs/pic10.jpeg">
+        </div>
+        <div class="img_gall">
+            <img src="./static/imgs/pic11.jpeg">
+        </div>
+        <div class="img_gall">
+            <img src="./static/imgs/pic12.jpeg">
+        </div>
+        <div class="img_gall">
+            <img src="./static/imgs/pic13.jpeg">
+        </div>
+    </div>
+
+
+
+
+    <!----------payment info----------------------->
+
+    <div class="card2" id="payment">
+        <h3>Payment Info</h3>
+
+
+        <h2>Paytm</h2>
+        <p>UPI ID : 9833769885</p>
+        <h3>Bank Account Details</h3>
+
+        <img src="./static/imgs/qr.jpeg">
+
+
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
